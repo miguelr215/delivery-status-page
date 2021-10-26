@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background-image: url('https://assets.codepen.io/6060109/ZigZag.png');
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 350px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 40px 40px -20px #3C7B61;
+    position: relative;
+    text-align: center;
+}
+
+.desk-only {
+    display: none;
+}
+
+#close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.inner-container {
+    padding: 0 30px;
+}
+
+.container p {
+    color: #828282;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.card-img {
+    margin: 50px auto 30px;
+    width: 45%;
+}
+
+.card-header {
+    margin-bottom: 15px;
+    color: #2F463D;
+    font-size: 22px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.meal-container {
+    background-color: #F0FFF5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.meal-img {
+    width: 20%;
+}
+
+.meal-description {
+    width: 50%;
+    margin-left: 15px;
+}
+
+.meal-description h4 {
+    color: #2F463D;
+}
+
+.meal-description p {
+    color: #7A8F85;
+}
+
+.meal-container a {
+    width: 25%;
+    font-size: 13px;
+    color: #467A66;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.meal-container a:hover {
+    color: #2F463D;
+}
+
+.card-btn {
+    background-color: #46A67E;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 15px;
+    width: 100%;
+    transition: all .3s ease;
+}
+
+.card-btn:hover {
+    opacity: .8;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.progress-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+}
+
+.progress-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #E0E0E0;
+    margin: 0 8px;
+}
+
+
+.progress-dot.green {
+    background-color: #67BD99;
+}
+
+@media only screen and (min-width: 992px) {
+    .page-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin: 40px 0;
+    }
+
+    .container.desk-only {
+        display: block;
+        height: 550px;
+    }
+
+    .container.center {
+        z-index: 10;
+        width: 375px;
+    }
+
+    .container.desk-only:first-child {
+        margin-right: -20px;
+    }
+
+    .container.desk-only:last-child {
+        margin-left: -20px;
+    }
+
+    .progress-slider {
+        margin-top: 70px;
+    }
+
+    .card-btn.inactive {
+        background-color: #BDBDBD;
+        box-shadow: none;
+    }
+}
